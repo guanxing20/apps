@@ -27,10 +27,10 @@ export const prodParasPolkadot: Omit<EndpointOption, 'teleport'>[] = [
       'Acala Foundation 3': 'wss://acala-rpc-3.aca-api.network/ws',
       Dwellir: 'wss://acala-rpc.n.dwellir.com',
       IBP1: 'wss://acala.ibp.network',
-      IBP2: 'wss://acala.dotters.network',
+      IBP2: 'wss://acala.dotters.network'
       // LuckyFriday: 'wss://rpc-acala.luckyfriday.io', // https://github.com/polkadot-js/apps/issues/10728
       // 'Automata 1RPC': 'wss://1rpc.io/aca' // https://github.com/polkadot-js/apps/issues/8648
-      OnFinality: 'wss://acala-polkadot.api.onfinality.io/public-ws'
+      // OnFinality: 'wss://acala-polkadot.api.onfinality.io/public-ws'
       // 'Polkawallet 0': 'wss://acala.polkawallet.io' // https://github.com/polkadot-js/apps/issues/9760
     },
     text: 'Acala',
@@ -102,16 +102,16 @@ export const prodParasPolkadot: Omit<EndpointOption, 'teleport'>[] = [
     }
   },
   {
-    homepage: 'https://crowdloan.bifrost.app',
+    homepage: 'https://bifrost.io/',
     info: 'bifrost',
     paraId: 2030,
     providers: {
       IBP1: 'wss://bifrost-polkadot.ibp.network',
       IBP2: 'wss://bifrost-polkadot.dotters.network',
       Liebi: 'wss://hk.p.bifrost-rpc.liebi.com/ws',
-      LiebiEU: 'wss://eu.bifrost-polkadot-rpc.liebi.com/ws'
+      LiebiEU: 'wss://eu.bifrost-polkadot-rpc.liebi.com/ws',
       // OnFinality: 'wss://bifrost-polkadot.api.onfinality.io/public-ws',
-      // RadiumBlock: 'wss://bifrost.public.curie.radiumblock.co/ws' // https://github.com/polkadot-js/apps/issues/11098
+      RadiumBlock: 'wss://bifrost.public.curie.radiumblock.co/ws' // https://github.com/polkadot-js/apps/issues/11098
     },
     text: 'Bifrost',
     ui: {
@@ -291,7 +291,7 @@ export const prodParasPolkadot: Omit<EndpointOption, 'teleport'>[] = [
     },
     text: 'Frequency',
     ui: {
-      color: '#00b6af',
+      color: '#790e70',
       logo: chainsFrequencySVG
     }
   },
