@@ -3,7 +3,7 @@
 
 import type { EndpointOption } from './types.js';
 
-import { chainsAmplitudeSVG, chainsCoretimeKusamaSVG, chainsFrequencyPaseoSVG, chainsHydrationPaseoSVG, chainsKreivoSVG, chainsLaosSigmaPNG, chainsMyxcavPNG, chainsNeurowebTestnetPNG, chainsPaseoPNG, chainsPeoplePolkadotSVG, chainsPopNetworkSVG, chainsWatrPNG, chainsWeTEESVG } from '@polkadot/apps-config/ui/logos/chains';
+import { chainsAmplitudeSVG, chainsCoretimeKusamaSVG, chainsFrequencyPaseoSVG, chainsHydrationPaseoSVG, chainsKreivoSVG, chainsLaosSigmaPNG, chainsMyxcavPNG, chainsNeurowebTestnetPNG, chainsPaseoPNG, chainsPeoplePolkadotSVG, chainsPopNetworkSVG, chainsQuantumFusionPNG, chainsWatrPNG, chainsWeTEESVG } from '@polkadot/apps-config/ui/logos/chains';
 import { nodesAjunaPNG, nodesAssetHubSVG, nodesAventusSVG, nodesBajunPNG, nodesBifrostSVG, nodesBridgeHubSVG, nodesDarwiniaKoiSVG, nodesHeimaPaseoPNG, nodesHyperbridgePNG, nodesIdealNetworkSVG, nodesIntegriteeSVG, nodesKiltIconSVG, nodesMandalaPNG, nodesMusePNG, nodesMyriadPaseoSVG, nodesNodleSVG, nodesRegionxPNG, nodesRexSVG, nodesXodePNG, nodesZeitgeistPNG } from '@polkadot/apps-config/ui/logos/nodes';
 
 import { PASEO_GENESIS } from '../api/constants.js';
@@ -87,7 +87,7 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     info: 'Bifrost(Paseo)',
     paraId: 2030,
     providers: {
-      Liebi: 'wss://bifrost-rpc.paseo.liebi.com/ws'
+      // Liebi: 'wss://bifrost-rpc.paseo.liebi.com/ws' // https://github.com/polkadot-js/apps/issues/11692
     },
     text: 'Bifrost',
     ui: {
@@ -165,7 +165,7 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     info: 'Ideal Network',
     paraId: 4502,
     providers: {
-      // 'IDN Node': 'wss://idn0-testnet.idealabs.network' // https://github.com/polkadot-js/apps/issues/11263
+      'IDN Node': 'wss://idn0-testnet.idealabs.network'
     },
     text: 'Ideal Network',
     ui: {
@@ -320,6 +320,19 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     }
   },
   {
+    homepage: 'https://qfnetwork.xyz/',
+    info: 'quantum-fusion-paseo',
+    paraId: 4775,
+    providers: {
+      'Quantum Fusion': 'wss://para-test.qfnetwork.xyz'
+    },
+    text: 'Quantum Fusion (Paseo)',
+    ui: {
+      color: '#2E2E5C',
+      logo: chainsQuantumFusionPNG
+    }
+  },
+  {
     info: 'regionxCocos',
     paraId: 4509,
     providers: {
@@ -410,7 +423,7 @@ export const testParasPaseoCommon: EndpointOption[] = [
       TurboFlakes: 'wss://sys.turboflakes.io/asset-hub-paseo'
     },
     relayName: 'paseo',
-    teleport: [-1],
+    teleport: [-1, 1002, 1111],
     text: 'AssetHub',
     ui: {
       color: '#77bb77',
@@ -426,7 +439,7 @@ export const testParasPaseoCommon: EndpointOption[] = [
       IBP2: 'wss://bridge-hub-paseo.dotters.network'
     },
     relayName: 'paseo',
-    teleport: [-1],
+    teleport: [-1, 1000],
     text: 'BridgeHub',
     ui: {
       color: '#AAADD7',
@@ -456,11 +469,11 @@ export const testParasPaseoCommon: EndpointOption[] = [
     paraId: 1111,
     providers: {
       IBP1: 'wss://passet-hub-paseo.ibp.network',
-      // IBP2: 'wss://passet-hub-paseo.dotters.network', // finishing deployment
+      IBP2: 'wss://passet-hub-paseo.dotters.network',
       Parity: 'wss://testnet-passet-hub.polkadot.io'
     },
     relayName: 'paseo',
-    teleport: [-1],
+    teleport: [-1, 1000],
     text: 'PAssetHub - Contracts',
     ui: {
       color: '#77bb77',
